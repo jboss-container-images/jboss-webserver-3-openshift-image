@@ -1,0 +1,7 @@
+# Red Hat JBoss Web Server 3.0 OpenShift container images
+
+Components are available in the tomcat7 and tomcat8 directories.
+
+# License
+
+See link:LICENSE[LICENSE] file.

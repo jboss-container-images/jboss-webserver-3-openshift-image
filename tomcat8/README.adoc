@@ -1,0 +1,7 @@
+# Red Hat JBoss Web Server 3.0 - Tomcat 8 OpenShift container image
+
+NOTE: Extends link:https://github.com/jboss-container-images/jboss-webserver-3-image/tree/webserver30/tomcat8[Red Hat JBoss Web Server 3.0 Tomcat 8 container image]
+
+# License
+
+See link:../LICENSE[LICENSE] file.
