@@ -42,6 +42,9 @@ envs:
     - name: JWS_REALM_USERCRED_COL
     - name: JWS_REALM_USERROLE_TABLE
     - name: JWS_REALM_ROLENAME_COL
+    - name: DISABLE_REMOTE_IP_VALVE
+      description: If not true, org.apache.catalina.valves.RemoteIpValve will be enabled in server.xml
+      example: "false"
     - name: DB_SERVICE_PREFIX_MAPPING
       example: test-postgresql=TEST_POSTGRESQL,test-mysql=TEST_MYSQL
     - name: AB_JOLOKIA_OFF
@@ -139,8 +142,6 @@ sources:
       md5: 0da0fbfb0ff2160df3a4832d28003361
     - artifact: jsonevent-layout-1.7-redhat-1.jar
       md5: 08f9aa037ac91c4aaa0d5dabf143a60e
-    - artifact: tomcat-7-valves-1.0.3.Final-redhat-1.jar
-      md5: f286f6748e6d134ed0a9dadd8320ecd2
 dogen:
     version: 2.1.0
     plugins:
