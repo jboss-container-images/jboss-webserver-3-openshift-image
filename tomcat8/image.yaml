@@ -139,8 +139,6 @@ sources:
       md5: 0da0fbfb0ff2160df3a4832d28003361
     - artifact: jsonevent-layout-1.7-redhat-1.jar
       md5: 08f9aa037ac91c4aaa0d5dabf143a60e
-    - artifact: tomcat-8-valves-1.0.3.Final-redhat-1.jar
-      md5: d506949eb5044fbad5925912db1d0dff
 dogen:
     version: 2.1.0
     plugins:
