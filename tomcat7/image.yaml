@@ -142,7 +142,7 @@ sources:
     - artifact: tomcat-7-valves-1.0.3.Final-redhat-1.jar
       md5: f286f6748e6d134ed0a9dadd8320ecd2
 dogen:
-    version: 2.1.0
+    version: 2.4.0
     plugins:
         dist_git:
             repo: jboss-webserver-3-docker
