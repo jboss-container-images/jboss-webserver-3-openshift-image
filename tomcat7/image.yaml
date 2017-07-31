@@ -122,6 +122,9 @@ envs:
     - name: GC_MAX_METASPACE_SIZE
       description: The maximum metaspace size.
       example: "100"
+    - name: "ENABLE_ACCESS_LOG"
+      example: "true"
+      description: Enable the Access Log.
 ports:
     - value: 8443
     - value: 8778
