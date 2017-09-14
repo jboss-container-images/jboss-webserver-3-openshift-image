@@ -148,7 +148,7 @@ sources:
     - artifact: tomcat-8-valves-1.0.3.Final-redhat-1.jar
       md5: d506949eb5044fbad5925912db1d0dff
 dogen:
-    version: 2.4.1
+    version: 2.4.3
     plugins:
         dist_git:
             repo: jboss-webserver-3-docker
