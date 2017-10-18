@@ -156,6 +156,7 @@ modules:
           - name: jboss-maven
           - name: os-jws-chmod
           - name: openshift-passwd
+          - name: os-logging
 packages:
       repositories:
           - jboss-os
