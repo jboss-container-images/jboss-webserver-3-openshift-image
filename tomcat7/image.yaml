@@ -162,7 +162,6 @@ packages:
           - jboss-os
           - jboss-rhscl
       install:
-          - rh-maven33
           - rh-mongodb32-mongo-java-driver
           - postgresql-jdbc
           - mysql-connector-java
