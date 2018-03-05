@@ -5,6 +5,8 @@ description: "Red Hat JBoss Web Server 3.1 - Tomcat 8 OpenShift container image"
 version: "1.2"
 from: "jboss-webserver-3/webserver31-tomcat8:latest"
 labels:
+    - name: "com.redhat.component"
+      value: "jboss-webserver-3-webserver31-tomcat8-openshift-container"
     - name: "io.k8s.description"
       value: "Platform for building and running web applications on JBoss Web Server 3.1 - Tomcat v8"
     - name: "io.k8s.display-name"
@@ -52,8 +54,7 @@ envs:
       example: 0.5
       description: Set the initial Java heap size, as a percentage of the maximum heap size.
     - name: JAVA_MAX_MEM_RATIO
-      description: This is used to calculate a default maximal heap memory based on a containers restriction. If used in a Docker container without any memory constraints for the container then this option has no effect. If there is a memory constraint then `-Xmx` is set to a ratio of the container available memory as set here. The default is `50` which means 50% of the available memory is used as an upper boundary. You can skip this mechanism by setting this value to `0` in which case no `-Xmx` option
-            is added.
+      description: This is used to calculate a default maximal heap memory based on a containers restriction. If used in a container without any memory constraints for the container then this option has no effect. If there is a memory constraint then `-Xmx` is set to a ratio of the container available memory as set here. The default is `50` which means 50% of the available memory is used as an upper boundary. You can skip this mechanism by setting this value to `0` in which case no `-Xmx` option is added.
       example: "50"
     - name: JAVA_INITIAL_MEM_RATIO
       description: This is used to calculate a default initial heap memory based the maximumal heap memory.  The default is `100` which means 100% of the maximal heap is used for the initial heap size.  You can skip this mechanism by setting this value to `0` in which case no `-Xms` option is added.
@@ -138,5 +139,5 @@ run:
           - "/opt/webserver/bin/launch.sh"
 osbs:
       repository:
-            name: jboss-webserver-3-docker
+            name: containers/jboss-webserver-3
             branch: jb-webserver-3.1-tomcat-8-openshift-rhel-7
