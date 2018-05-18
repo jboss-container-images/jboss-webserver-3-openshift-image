@@ -1,0 +1,9 @@
+modules:
+      repositories:
+          - git:
+                  url: https://github.com/jboss-openshift/cct_module.git
+                  ref: sprint-16
+osbs:
+      repository:
+            name: containers/jboss-webserver-3
+            branch: jb-webserver-3.1-tomcat-7-openshift-cp-rhel-7
