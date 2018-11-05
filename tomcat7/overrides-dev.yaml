@@ -1,0 +1,4 @@
+osbs:
+      repository:
+            name: containers/jboss-webserver-3
+            branch: jb-webserver-3.1-tomcat-7-openshift-dev-rhel-7
