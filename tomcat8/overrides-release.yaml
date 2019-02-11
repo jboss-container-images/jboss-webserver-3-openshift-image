@@ -2,4 +2,4 @@ modules:
       repositories:
           - git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: sprint-25
+                  ref: sprint-28
