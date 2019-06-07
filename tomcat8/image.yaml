@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-webserver-3/webserver31-tomcat8-openshift"
 description: "Red Hat JBoss Web Server 3.1 - Tomcat 8 OpenShift container image"
 version: "1.5"
-from: "jboss-webserver-3/webserver31-tomcat8:3.1.6"
+from: "jboss-webserver-3/webserver31-tomcat8:3.1.7"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-3-webserver31-tomcat8-openshift-container"
@@ -95,11 +95,12 @@ modules:
                   ref: master
       install:
           - name: dynamic-resources
+          - name: jboss.container.maven.35.bash
+            version: "3.5scl"
           - name: s2i-common
           - name: java-alternatives
           - name: os-jws-s2i
           - name: os-jws8-conffiles
-          - name: os-jws-deployments
           - name: os-jws-deployments
           - name: os-java-jolokia
           - name: os-jws-jolokia
@@ -116,11 +117,8 @@ modules:
           - name: openshift-passwd
           - name: os-logging
 packages:
-      repositories:
-          - jboss-os
-          - jboss-rhscl
       install:
-          - rh-mongodb32-mongo-java-driver
+          - rh-mongodb36-mongo-java-driver
           - postgresql-jdbc
           - mysql-connector-java
           - PyYAML
