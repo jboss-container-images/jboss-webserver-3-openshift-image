@@ -2,7 +2,7 @@ schema_version: 1
 
 name: "jboss-webserver-3/webserver31-tomcat7-openshift"
 description: "Red Hat JBoss Web Server 3.1 - Tomcat 7 OpenShift container image"
-version: "1.5"
+version: "1.4"
 from: "jboss-webserver-3/webserver31-tomcat7:3.1.7"
 labels:
     - name: "com.redhat.component"
@@ -92,7 +92,7 @@ modules:
       repositories:
           - git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: master
+                  ref: 0.36.0
       install:
           - name: dynamic-resources
           - name: jboss.container.maven.35.bash
