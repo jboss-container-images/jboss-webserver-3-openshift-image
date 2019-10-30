@@ -17,6 +17,8 @@ labels:
       value: "builder,java,tomcat7"
     - name: "io.openshift.s2i.scripts-url"
       value: "image:///usr/local/s2i"
+    - name: "maintainer"
+      value: "szappis@redhat.com"
 envs:
     - name: "STI_BUILDER"
       value: "jee"
