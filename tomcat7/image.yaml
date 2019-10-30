@@ -2,8 +2,8 @@ schema_version: 1
 
 name: "jboss-webserver-3/webserver31-tomcat7-openshift"
 description: "Red Hat JBoss Web Server 3.1 - Tomcat 7 OpenShift container image"
-version: "1.5"
-from: "jboss-webserver-3/webserver31-tomcat7:3.1.6"
+version: "1.4"
+from: "jboss-webserver-3/webserver31-tomcat7:3.1.7"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-3-webserver31-tomcat7-openshift-container"
@@ -17,6 +17,8 @@ labels:
       value: "builder,java,tomcat7"
     - name: "io.openshift.s2i.scripts-url"
       value: "image:///usr/local/s2i"
+    - name: "maintainer"
+      value: "szappis@redhat.com"
 envs:
     - name: "STI_BUILDER"
       value: "jee"
@@ -92,14 +94,15 @@ modules:
       repositories:
           - git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: master
+                  ref: 0.36.0
       install:
           - name: dynamic-resources
+          - name: jboss.container.maven.35.bash
+            version: "3.5scl"
           - name: s2i-common
           - name: java-alternatives
           - name: os-jws-s2i
           - name: os-jws7-conffiles
-          - name: os-jws-deployments
           - name: os-jws-deployments
           - name: os-java-jolokia
           - name: os-jws-jolokia
@@ -111,16 +114,12 @@ modules:
           - name: os-jws-secure-mgmt-console
           - name: os-jws-rm-root
           - name: os-jws-rm-defaults
-          - name: jboss-maven
           - name: os-jws-chmod
           - name: openshift-passwd
           - name: os-logging
 packages:
-      repositories:
-          - jboss-os
-          - jboss-rhscl
       install:
-          - rh-mongodb32-mongo-java-driver
+          - rh-mongodb36-mongo-java-driver
           - postgresql-jdbc
           - mysql-connector-java
           - PyYAML
