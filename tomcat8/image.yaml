@@ -124,7 +124,8 @@ packages:
           - mysql-connector-java
           - PyYAML
 artifacts:
-    - path: tomcat-8-valves-1.0.3.Final-redhat-1.jar
+    - name: tomcat-8-valves
+      target: tomcat-8-valves-1.0.3.Final-redhat-1.jar
       md5: d506949eb5044fbad5925912db1d0dff
 run:
       user: 185
