@@ -1,0 +1,12 @@
+schema_version: 1
+name: jws7-conffiles
+version: '1.0'
+description: Legacy jws7-conffiles script package.
+artifacts:
+    - name: tomcat-7-valves
+      target: tomcat-7-valves-1.0.3.Final-redhat-1.jar
+      md5: f286f6748e6d134ed0a9dadd8320ecd2
+
+execute:
+- script: run
+  user: '185'

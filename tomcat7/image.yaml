@@ -94,21 +94,23 @@ modules:
       repositories:
           - git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: 0.36.0
+                  ref: master
+          - path: custom-modules
       install:
-          - name: dynamic-resources
           - name: jboss.container.maven.35.bash
             version: "3.5scl"
+          - name: dynamic-resources
           - name: s2i-common
           - name: java-alternatives
           - name: os-jws-s2i
-          - name: os-jws7-conffiles
+          - name: jws7-conffiles
+            version: '1.0'
           - name: os-jws-deployments
-          - name: os-java-jolokia
+          - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
           - name: os-jws-db-drivers
           - name: os-jws-logging
-          - name: os-java-run
+          - name: jboss.container.java.jvm.bash
           - name: os-jws-launch
           - name: os-jws-https
           - name: os-jws-secure-mgmt-console
@@ -116,17 +118,13 @@ modules:
           - name: os-jws-rm-defaults
           - name: os-jws-chmod
           - name: openshift-passwd
-          - name: os-logging
+          - name: jboss.container.util.logging.bash
 packages:
       install:
           - rh-mongodb36-mongo-java-driver
           - postgresql-jdbc
           - mysql-connector-java
           - PyYAML
-artifacts:
-    - name: tomcat-7-valves
-      target: tomcat-7-valves-1.0.3.Final-redhat-1.jar
-      md5: f286f6748e6d134ed0a9dadd8320ecd2
 run:
       user: 185
       cmd:
