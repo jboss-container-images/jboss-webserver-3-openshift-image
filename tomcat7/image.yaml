@@ -94,7 +94,7 @@ modules:
       repositories:
           - git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: master
+                  ref: 0.36.0
           - path: custom-modules
       install:
           - name: jboss.container.maven.35.bash

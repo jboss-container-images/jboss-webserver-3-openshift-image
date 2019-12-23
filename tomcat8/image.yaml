@@ -95,16 +95,18 @@ modules:
           - git:
                   url: https://github.com/jboss-openshift/cct_module.git
                   ref: 0.36.0
+          - path: custom-modules
       install:
-          - name: dynamic-resources
           - name: jboss.container.maven.35.bash
             version: "3.5scl"
+          - name: dynamic-resources
           - name: s2i-common
           - name: java-alternatives
           - name: os-jws-s2i
-          - name: os-jws8-conffiles
+          - name: jws8-conffiles
+            version: "1.0"
           - name: os-jws-deployments
-          - name: os-java-jolokia
+          - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia
           - name: os-jws-db-drivers
           - name: os-jws-logging
@@ -116,17 +118,14 @@ modules:
           - name: os-jws-rm-defaults
           - name: os-jws-chmod
           - name: openshift-passwd
-          - name: os-logging
+          - name: jboss.container.util.logging.bash
 packages:
       install:
           - rh-mongodb36-mongo-java-driver
           - postgresql-jdbc
           - mysql-connector-java
           - PyYAML
-artifacts:
-    - name: tomcat-8-valves
-      target: tomcat-8-valves-1.0.3.Final-redhat-1.jar
-      md5: d506949eb5044fbad5925912db1d0dff
+
 run:
       user: 185
       cmd:

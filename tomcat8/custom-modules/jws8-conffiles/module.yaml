@@ -1,0 +1,11 @@
+schema_version: 1
+name: jws8-conffiles
+version: '1.0'
+description: Legacy jws8-conffiles script package.
+artifacts:
+    - name: tomcat-8-valves
+      target: tomcat-8-valves-1.0.3.Final-redhat-1.jar
+      md5: d506949eb5044fbad5925912db1d0dff
+execute:
+- script: run
+  user: '185'
