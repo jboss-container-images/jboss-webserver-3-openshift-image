@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-webserver-3/webserver31-tomcat8-openshift"
 description: "Red Hat JBoss Web Server 3.1 - Tomcat 8 OpenShift container image"
 version: "1.4"
-from: "jboss-webserver-3/webserver31-tomcat8:3.1.8"
+from: "jboss-webserver-3/webserver31-tomcat8:3.1.9"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-3-webserver31-tomcat8-openshift-container"
@@ -49,12 +49,6 @@ envs:
     - name: SCRIPT_DEBUG
       description: If set to true, ensurses that the bash scripts are executed with the -x option, printing the commands and their arguments as they are executed.
       example: "true"
-    - name: "CONTAINER_HEAP_PERCENT"
-      example: 0.5
-      description: Set the maximum Java heap size, as a percentage of available container memory.
-    - name: "INITIAL_HEAP_PERCENT"
-      example: 0.5
-      description: Set the initial Java heap size, as a percentage of the maximum heap size.
     - name: JAVA_MAX_MEM_RATIO
       description: This is used to calculate a default maximal heap memory based on a containers restriction. If used in a container without any memory constraints for the container then this option has no effect. If there is a memory constraint then `-Xmx` is set to a ratio of the container available memory as set here. The default is `50` which means 50% of the available memory is used as an upper boundary. You can skip this mechanism by setting this value to `0` in which case no `-Xmx` option is added.
       example: "50"
