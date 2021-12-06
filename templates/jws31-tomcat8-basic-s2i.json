@@ -1,6 +1,6 @@
 {
     "kind": "Template",
-    "apiVersion": "v1",
+    "apiVersion": "template.openshift.io/v1",
     "metadata": {
         "annotations": {
             "iconClass": "icon-rh-tomcat",
@@ -136,7 +136,7 @@
         },
         {
             "kind": "Route",
-            "apiVersion": "v1",
+            "apiVersion": "route.openshift.io/v1",
             "id": "${APPLICATION_NAME}-http",
             "metadata": {
                 "name": "${APPLICATION_NAME}",
@@ -156,7 +156,7 @@
         },
         {
             "kind": "ImageStream",
-            "apiVersion": "v1",
+            "apiVersion": "image.openshift.io/v1",
             "metadata": {
                 "name": "${APPLICATION_NAME}",
                 "labels": {
@@ -166,7 +166,7 @@
         },
         {
             "kind": "BuildConfig",
-            "apiVersion": "v1",
+            "apiVersion": "build.openshift.io/v1",
             "metadata": {
                 "name": "${APPLICATION_NAME}",
                 "labels": {
@@ -234,7 +234,7 @@
         },
         {
             "kind": "DeploymentConfig",
-            "apiVersion": "v1",
+            "apiVersion": "apps.openshift.io/v1",
             "metadata": {
                 "name": "${APPLICATION_NAME}",
                 "labels": {
