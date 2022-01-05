@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-webserver-3/webserver31-tomcat7-openshift"
 description: "Red Hat JBoss Web Server 3.1 - Tomcat 7 OpenShift container image"
 version: "1.4"
-from: "jboss-webserver-3/webserver31-tomcat7:3.1.11"
+from: "jboss-webserver-3/webserver31-tomcat7:3.1.12"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-3-webserver31-tomcat7-openshift-container"
@@ -88,7 +88,7 @@ modules:
       repositories:
           - git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: 0.36.0
+                  ref: 0.39.0
           - path: custom-modules
       install:
           - name: jboss.container.maven.35.bash
@@ -98,7 +98,7 @@ modules:
           - name: java-alternatives
           - name: os-jws-s2i
           - name: jws7-conffiles
-            version: '1.0'
+            version: "1.0"
           - name: os-jws-deployments
           - name: jboss.container.jolokia.bash
           - name: os-jws-jolokia

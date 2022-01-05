@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-webserver-3/webserver31-tomcat8-openshift"
 description: "Red Hat JBoss Web Server 3.1 - Tomcat 8 OpenShift container image"
 version: "1.4"
-from: "jboss-webserver-3/webserver31-tomcat8:3.1.11"
+from: "jboss-webserver-3/webserver31-tomcat8:3.1.12"
 labels:
     - name: "com.redhat.component"
       value: "jboss-webserver-3-webserver31-tomcat8-openshift-container"
@@ -88,7 +88,7 @@ modules:
       repositories:
           - git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: 0.36.0
+                  ref: 0.39.0
           - path: custom-modules
       install:
           - name: jboss.container.maven.35.bash
@@ -104,7 +104,7 @@ modules:
           - name: os-jws-jolokia
           - name: os-jws-db-drivers
           - name: os-jws-logging
-          - name: os-java-run
+          - name: jboss.container.java.jvm.bash
           - name: os-jws-launch
           - name: os-jws-https
           - name: os-jws-secure-mgmt-console
@@ -119,7 +119,6 @@ packages:
           - postgresql-jdbc
           - mysql-connector-java
           - PyYAML
-
 run:
       user: 185
       cmd:
